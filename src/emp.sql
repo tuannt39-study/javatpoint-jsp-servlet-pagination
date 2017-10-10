@@ -1,0 +1,27 @@
+
+CREATE TABLE emp (
+  id number(6),
+  name VARCHAR2(10),
+  salary number(6),
+  PRIMARY KEY (id)
+);
+
+INSERT ALL 
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (1, 'Amit', 30000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (2, 'Ajeet', 40000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (3, 'James', 50000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (4, 'Sonoo', 60000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (5, 'Sarfraz', 70000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (6, 'Bob', 80000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (7, 'Rahul', 90000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (8, 'Rakesh', 25000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (9, 'Udit', 35000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (10, 'Jai', 45000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (11, 'Nikhil', 55000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (12, 'Somesh', 65000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (13, 'Rajesh', 75000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (14, 'Ankit', 85000)
+INTO "TUAN"."EMP" (ID, NAME, SALARY) VALUES (15, 'Ratan', 95000)
+SELECT * FROM EMP;
+
+select * from ( select a.*, rownum rnum from ( SELECT * FROM EMP order by ID ) a where rownum <= 3 ) where rnum >=1;
